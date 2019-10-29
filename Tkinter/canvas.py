@@ -9,11 +9,11 @@ cv = tk.Canvas(windows, bg='blue', width=150, height=100)  # 画布，用于放�
 cv.pack()
 
 # 在画布上放置图片
-image_file = tk.PhotoImage(file)
+image_file = tk.PhotoImage(file='photo.jpg')
 
 
 def fun():
     pass
-
+#  git
 
 windows.mainloop()  # 主循环
