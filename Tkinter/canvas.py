@@ -9,11 +9,10 @@ cv = tk.Canvas(windows, bg='blue', width=150, height=100)  # 画布，用于放�
 cv.pack()
 
 # 在画布上放置图片
-image_file = tk.PhotoImage(file='photo.jpg')
+image_file = tk.PhotoImage(file='D:\\github\\python_learning\\Tkinter\\image\\photo_test.gif')  # 注意文件路径的表达形式
 
 
 def fun():
     pass
-#  git
 
 windows.mainloop()  # 主循环
