@@ -139,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572411247760</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add some menufile">
+      <created>1572412195234</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1572412195234</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -162,6 +169,7 @@
     <MESSAGE value="Add image" />
     <MESSAGE value="Finished learning canvas" />
     <MESSAGE value="Add Menubar file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Menubar file" />
+    <MESSAGE value="Add some menufile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add some menufile" />
   </component>
 </project>
