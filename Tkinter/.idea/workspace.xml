@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc8e960a-4dd2-460c-b126-ca514d4d8c50" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Tkinter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Tkinter.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/canvas.py" beforeDir="false" afterPath="$PROJECT_DIR$/canvas.py" afterDir="false" />
     </list>
@@ -98,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572325650501</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add image">
+      <created>1572366104787</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1572366104787</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -118,6 +123,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="commit with pycharm" />
     <MESSAGE value="add image file" />
-    <option name="LAST_COMMIT_MESSAGE" value="add image file" />
+    <MESSAGE value="Add image" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add image" />
   </component>
 </project>
