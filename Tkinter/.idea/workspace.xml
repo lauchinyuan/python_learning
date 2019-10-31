@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc8e960a-4dd2-460c-b126-ca514d4d8c50" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/messagebox.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messagebox.py" beforeDir="false" afterPath="$PROJECT_DIR$/messagebox.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -204,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572497730625</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add messagebox file">
+      <created>1572498838491</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1572498838492</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -230,6 +237,7 @@
     <MESSAGE value="Add some menufile" />
     <MESSAGE value="Finished learning menu" />
     <MESSAGE value="Add frame file and finished learning tkinter frame" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add frame file and finished learning tkinter frame" />
+    <MESSAGE value="Add messagebox file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add messagebox file" />
   </component>
 </project>
