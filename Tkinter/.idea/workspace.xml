@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc8e960a-4dd2-460c-b126-ca514d4d8c50" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frame.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/messagebox.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,7 +43,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.frame">
+  <component name="RunManager" selected="Python.messagebox">
     <configuration name="canvas" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Tkinter" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -107,8 +107,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="messagebox" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Tkinter" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/messagebox.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.messagebox" />
         <item itemvalue="Python.frame" />
         <item itemvalue="Python.menubar" />
         <item itemvalue="Python.canvas" />
@@ -175,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572451916237</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add frame file and finished learning tkinter frame">
+      <created>1572497730625</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1572497730625</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -200,6 +229,7 @@
     <MESSAGE value="Add Menubar file" />
     <MESSAGE value="Add some menufile" />
     <MESSAGE value="Finished learning menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished learning menu" />
+    <MESSAGE value="Add frame file and finished learning tkinter frame" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add frame file and finished learning tkinter frame" />
   </component>
 </project>
