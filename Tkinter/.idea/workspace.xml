@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc8e960a-4dd2-460c-b126-ca514d4d8c50" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/login_interface.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pack_grid_place.py" beforeDir="false" afterPath="$PROJECT_DIR$/pack_grid_place.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -247,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572538875394</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Finish learning pack&amp;place">
+      <created>1572584831893</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1572584831893</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -276,6 +283,7 @@
     <MESSAGE value="Add messagebox file" />
     <MESSAGE value="Finish learning messagebox" />
     <MESSAGE value="Add pack_grid_place file and some code to this file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add pack_grid_place file and some code to this file" />
+    <MESSAGE value="Finish learning pack&amp;place" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish learning pack&amp;place" />
   </component>
 </project>

@@ -1,5 +1,4 @@
 import tkinter as tk
-import tkinter.messagebox  # 导入messagebox模组
 
 windows = tk.Tk()  # 注意是Tk
 windows.title('tkinter')
