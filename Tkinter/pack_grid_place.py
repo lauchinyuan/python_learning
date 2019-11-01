@@ -14,8 +14,8 @@ windows.geometry('100x200')  # 设定窗口大小
 # grid网格式放置
 for i in range(4):
     for j in range(3):  # 四行三列
-        tk.Label(windows, text=1).grid(row=i, column=j)  # 注意调用网格时不要同时使用pack
+        tk.Label(windows, text=1).grid(row=i, column=j, padx=10, pady=10)  # 注意调用网格时不要同时使用pack
 
-
+tk.Label(windows, text='Place').place(x=10, y=60, anchor='nw')  # 指定像素点放置,此处指定该点为nw
 windows.mainloop()
 
