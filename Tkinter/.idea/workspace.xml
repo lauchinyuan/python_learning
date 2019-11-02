@@ -268,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572586157210</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Increase basic interface for login and signup">
+      <created>1572625688424</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1572625688425</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -299,6 +306,7 @@
     <MESSAGE value="Add pack_grid_place file and some code to this file" />
     <MESSAGE value="Finish learning pack&amp;place" />
     <MESSAGE value="Add some code to login_interface.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add some code to login_interface.py" />
+    <MESSAGE value="Increase basic interface for login and signup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Increase basic interface for login and signup" />
   </component>
 </project>

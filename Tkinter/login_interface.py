@@ -25,7 +25,9 @@ tk.Entry(windows, textvariable=usr_password, show='*').place(x=680, y=220)
 
 #  按键 login and sign up及相关功能
 def usr_login():
-    pass
+    #  获得输入信息
+    user_name = usr_name.get()
+    user_password = usr_password.get()
 
 
 def usr_signup():
