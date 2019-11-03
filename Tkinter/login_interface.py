@@ -1,6 +1,7 @@
 # tkinter的综合应用，设计登录窗口
 import tkinter as tk
-
+import pickle
+import tkinter.messagebox
 windows = tk.Tk()  # 注意是Tk
 windows.title('tkinter')
 windows.geometry('100x200')  # 设定窗口大小
@@ -28,12 +29,29 @@ def usr_login():
     #  获得输入信息
     user_name = usr_name.get()
     user_password = usr_password.get()
+    try:  # 尝试打开用户信息文件
+        with open('.\\file\\userinfo.pickle', 'rb') as file:
+            user_info = pickle.load(file)
+    except FileNotFoundError:  # 如果文件不存在
+        tk.messagebox.showerror(title='Error', message='file not found')
+
+    if  user_name in user_info :  # 如果用户名存在
+        if user_password == user_info[user_name]:  # 密码正确
+            tk.messagebox.showinfo(title='Welcome', message='hello '+str(user_name))
+
+        else:  # 如果用户输入密码不对
+            tk.messagebox.showerror(title='Error', message='Your password is wrong! Please retry')
+    else:  # 如果用户名不存在
+        tk.messagebox.showerror(title='Error', message='User not found')
 
 
 def usr_signup():
-    pass
+    signup_windows = tk.Toplevel(windows)  # 在windows窗口上再建立一个子窗口
+    signup_windows.geometry('100x200')
+    signup_windows.title('Sign up')
 
 
+# sign up & sign in 按键
 login_bt = tk.Button(windows, text='log in', command=usr_login).place(x=680, y=270)
 signup_bt = tk.Button(windows, text='sign up', command=usr_signup).place(x=760, y=270)
 

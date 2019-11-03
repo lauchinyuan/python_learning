@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc8e960a-4dd2-460c-b126-ca514d4d8c50" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/file/pickle_example.pickle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mypickle.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/login_interface.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +43,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.pickle">
+  <component name="RunManager" selected="Python.login_interface">
     <configuration name="frame" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Tkinter" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -152,8 +151,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.pickle" />
         <item itemvalue="Python.login_interface" />
+        <item itemvalue="Python.pickle" />
         <item itemvalue="Python.pack_grid_place" />
         <item itemvalue="Python.messagebox" />
         <item itemvalue="Python.frame" />
@@ -283,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572675161021</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Increase mypickle.py file and finished learning pickle">
+      <created>1572676116720</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1572676116720</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -315,6 +321,7 @@
     <MESSAGE value="Finish learning pack&amp;place" />
     <MESSAGE value="Increase basic interface for login and signup" />
     <MESSAGE value="Add some code to login_interface.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add some code to login_interface.py" />
+    <MESSAGE value="Increase mypickle.py file and finished learning pickle" />
+    <option name="LAST_COMMIT_MESSAGE" value="Increase mypickle.py file and finished learning pickle" />
   </component>
 </project>
