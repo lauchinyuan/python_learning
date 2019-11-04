@@ -289,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572676116720</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Create new windows">
+      <created>1572797740478</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1572797740478</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -322,6 +329,7 @@
     <MESSAGE value="Increase basic interface for login and signup" />
     <MESSAGE value="Add some code to login_interface.py" />
     <MESSAGE value="Increase mypickle.py file and finished learning pickle" />
-    <option name="LAST_COMMIT_MESSAGE" value="Increase mypickle.py file and finished learning pickle" />
+    <MESSAGE value="Create new windows" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create new windows" />
   </component>
 </project>

@@ -46,9 +46,24 @@ def usr_login():
 
 
 def usr_signup():
+    # 输入框变量
+    texv1 = tk.StringVar()
+    texv2 = tk.StringVar()
+    texv3 = tk.StringVar()
+
     signup_windows = tk.Toplevel(windows)  # 在windows窗口上再建立一个子窗口
     signup_windows.geometry('100x200')
     signup_windows.title('Sign up')
+
+    # 注册页面按钮
+    tk.Label(signup_windows, text='User name').place(x=0, y=20)
+    tk.Label(signup_windows, text='Password').place(x=0, y=40)
+    tk.Label(signup_windows, text='Confirm your password').place(x=0, y=60)
+
+    # 注册页面输入框
+    tk.Entry(signup_windows, textvariable=texv1).place(x=72, y=20)
+    tk.Entry(signup_windows, textvariable=texv2, show='*').place(x=72, y=40)
+    tk.Entry(signup_windows, textvariable=texv3, show='*').place(x=145, y=60)
 
 
 # sign up & sign in 按键
