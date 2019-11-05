@@ -46,6 +46,16 @@ def usr_login():
 
 
 def usr_signup():
+    def signup_ok():  # 确认注册函数
+        # 获取用户输入值
+        pas = texv2.get()
+        com_pas = texv3.get()
+        if pas == com_pas:  # 输入一致
+            pass
+
+    def signup_cancel():  # 取消注册函数
+        signup_windows.destroy()  # 关闭子窗口
+
     # 输入框变量
     texv1 = tk.StringVar()
     texv2 = tk.StringVar()
@@ -56,14 +66,18 @@ def usr_signup():
     signup_windows.title('Sign up')
 
     # 注册页面按钮
-    tk.Label(signup_windows, text='User name').place(x=0, y=20)
-    tk.Label(signup_windows, text='Password').place(x=0, y=40)
+    tk.Label(signup_windows, text='User name').place(x=70, y=20)
+    tk.Label(signup_windows, text='Password').place(x=70, y=40)
     tk.Label(signup_windows, text='Confirm your password').place(x=0, y=60)
 
     # 注册页面输入框
-    tk.Entry(signup_windows, textvariable=texv1).place(x=72, y=20)
-    tk.Entry(signup_windows, textvariable=texv2, show='*').place(x=72, y=40)
+    tk.Entry(signup_windows, textvariable=texv1).place(x=145, y=20)
+    tk.Entry(signup_windows, textvariable=texv2, show='*').place(x=145, y=40)
     tk.Entry(signup_windows, textvariable=texv3, show='*').place(x=145, y=60)
+
+    # 注册页面按键
+    tk.Button(signup_windows, text='OK', command=signup_ok).place(x=75, y=90)
+    tk.Button(signup_windows, text='CANCEL', command=signup_cancel).place(x=120, y=90)
 
 
 # sign up & sign in 按键
