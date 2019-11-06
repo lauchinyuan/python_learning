@@ -35,7 +35,7 @@ def usr_login():
     except FileNotFoundError:  # 如果文件不存在
         tk.messagebox.showerror(title='Error', message='file not found')
 
-    if  user_name in user_info :  # 如果用户名存在
+    if user_name in user_info:  # 如果用户名存在
         if user_password == user_info[user_name]:  # 密码正确
             tk.messagebox.showinfo(title='Welcome', message='hello '+str(user_name))
 
@@ -46,15 +46,34 @@ def usr_login():
 
 
 def usr_signup():
-    def signup_ok():  # 确认注册函数
+    def signup_ok():  # 确认注册
         # 获取用户输入值
+        usname = texv1.get()
         pas = texv2.get()
         com_pas = texv3.get()
-        if pas == com_pas:  # 输入一致
-            pass
+        try:  # 尝试开启文件，调用文件中的字典至本地
+            with open('.\\file\\userinfo.pickle', 'rb') as file1:
+                us_info = pickle.load(file1)
+        except FileNotFoundError:  # 文件不存在
+            with open('.\\file\\userinfo.pickle', 'wb') as file2:  # 准备创建新文件
+                temple_us_info = {'admin': 'admin '}
+                pickle.dump(temple_us_info, file2)
 
-    def signup_cancel():  # 取消注册函数
+        if pas == com_pas:  # 两次密码输入一致
+            if usname in us_info:  # 已经有该用户
+                tk.messagebox.showerror(title='Error', message='The user has already signed up!')
+            else:
+                us_info[usname] = pas  # 在本地字典中增加元素
+                with open('.\\file\\userinfo.pickle', 'wb') as file3:  # 将更新后的字典存储到文件中
+                    pickle.dump(us_info, file3)
+                    tk.messagebox.showinfo('Welcome', 'You have successfully signed up!')
+                    signup_windows.destroy()
+        else:  # 两次密码不一致
+            tk.messagebox.showerror(title='Error', message='Password and confirm password must be the same!')
         signup_windows.destroy()  # 关闭子窗口
+
+    def signup_cancel():  # 取消注册
+        signup_windows.destroy()
 
     # 输入框变量
     texv1 = tk.StringVar()
