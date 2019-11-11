@@ -1,2 +1,2 @@
-import serial
-class Communication( ):
+#!python3.7
+
