@@ -15,6 +15,3 @@ print(Test_Code.title)  # 导入Test_Code中的title属性
 all_attribute = dir(Test_Code)  # 使用dir获得模块所有可用的变量名列表
 print(all_attribute)
 
-
-
-
