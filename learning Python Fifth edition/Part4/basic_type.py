@@ -1,6 +1,8 @@
 # 基本对象类型
 import math
 import random
+import re
+
 a = 2**100
 print(a)
 # print(len(str(2**1000000)))
@@ -60,6 +62,43 @@ print('{},eggs and {}'.format('a', 'b'))  # 免数字操作（Python2.7+, 3.1+�
 # 数值格式化表达式
 print('{:,.2f}'.format(296999.2567))  # 分隔符将小数和整数分别指定格式
 print('%.2f|%+05d' % (3.14159, -42))  # %+05d带填充效果
+
+# 寻求帮助
+print(dir(S))  # 利用dir()方法查看对象的所有属性，其中方法也是函数属性
+print(S.__add__('ha ha ha'))  # 程序相对跑得慢
+help(S.format)  # 使用help方法查看帮助，help是面向系统代码的接口
+
+# 字符串编程的其他方式
+print(ord('A'))  # 使用ord查看十进制ASCII码
+S = 'A\0B\0C'
+print(len(S))  # 返回值为5，'\0'不是字符串的终点
+print(S)  # 结果为A B C
+
+# 三引号有利于HTML、XML、JSON代码
+S = """  
+三个
+引号
+时
+自动
+加
+换行符
+"""
+print(S)
+S = r'原始格式照例输出\n'  # 原始格式输出（raw）
+print(S)
+
+# Unicode支持
+print('sp\xc4m')  # 普通unicode格式，结果为spA(特殊)m
+print(b'a\x01c')  # 基于字节的数据
+'spam'.encode('utf8')  # 使用UTF-8编码
+'spam'.encode('utf16')  # 使用UTF-16编码
+
+# 模式匹配
+match = re.match('Hello[ \t]*(.*)world', 'Hello   Python world')  # 匹配子字符串，从Hello开始，后面跟着制表符和空格
+# 接着任意字符并将其保存至匹配组中，最后以单词world结尾
+print(match.group(1))
+
+
 
 
 
