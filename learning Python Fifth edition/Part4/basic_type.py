@@ -98,6 +98,39 @@ match = re.match('Hello[ \t]*(.*)world', 'Hello   Python world')  # 匹配子字
 # 接着任意字符并将其保存至匹配组中，最后以单词world结尾
 print(match.group(1))
 
+# 列表
+# 序列操作
+# 列表是序列的一种，支持前面讨论的对字符串进行的序列操作
+L = [123, 'Spam', 1.23]
+print(len(L))  # 结果为3
+print(L[0])  # 从0开始计数
+print(L[:-1])  # 对列表切片返回一个新列表
+print(L+[4, 5, 6])  # 连接
+print(L*2)  # 重复
+print(L)  # 原来L列表不变
+
+# 特定类型操作
+# 列表没有固定类型约束和固定大小
+# 大多数列表的方法都会原位置改变列表对象，而不是创建一个新的列表
+L.append('NI')  # 在列表末尾附加新对象
+print(L)
+L.pop(2)  # 删除第三个列表元素
+print(L)
+
+M = ['aa', 'cc', 'bb']
+M.sort()  # 按升序排序
+print(M)
+M.reverse()  # 顺序翻转
+print(M)
+
+# 边界检查
+# print(L[99])  # 不允许引用不存在的元素
+# L[99] = 1  # 不允许
+# print(L[99])
+
+
+
+
 
 
 
