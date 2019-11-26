@@ -124,9 +124,62 @@ M.reverse()  # 顺序翻转
 print(M)
 
 # 边界检查
+
 # print(L[99])  # 不允许引用不存在的元素
 # L[99] = 1  # 不允许
 # print(L[99])
+
+# 嵌套
+M = [[1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9]]  # 3×3列表矩阵
+print(M)
+print(M[1])  # 结果为[4, 5, 6]
+print(M[1][2])  # 结果为6
+
+# 推导
+col2 = [row[1] for row in M]
+print(col2)  # 结果为[2, 5, 8]，实质为对序列中的每一项运行一个表达式来创建新列表的方法
+col = [row[1] + 1 for row in M]
+print(col)  # 结果为[3, 6, 9]
+col = [row[1] for row in M if row[1] % 2 == 0]  # 高级推导表达式
+print(col)
+
+diag = [M[i][i] for i in [0, 1, 2]]  # 对角线
+print(diag)
+double = [c * 2 for c in 'Spam']  # 结果为['SS', 'pp', 'aa', 'mm']
+print(double)
+
+range1 = list(range(4))  # 生成连续整数,在Python3.X中需要list(),使用list()会强制返回所有值
+print(range1)
+range1 = list(range(-6, 7, 2))  # -6至+6每个间隔为2
+print(range1)
+
+mv = [[x ** 2, x ** 3] for x in range(4)]  # 注意range(4)结果为0, 1, 2, 3
+print(mv)
+
+mv = [[x, x/2, x*2] for x in range(-6, 7, 2) if x > 0]  # 加上判断语句
+print(mv)
+
+m = list(map(sum, M))
+print(m)
+
+my_set = {sum(row) for row in M}  # range也可以用于创建集合，每次执行过程中对指定行求和
+print(my_set)
+
+my_dir = {i: sum(M[i]) for i in range(3)}  # 使用推导创建字典
+print(my_dir)
+
+print([ord(x) for x in 'China'])  # 编码列表
+print({ord(x) for x in 'China'})  # 编码集合
+print({x: ord(x) for x in 'China'})  # 编码字典
+print(ord(x) for x in 'China')  # 普通值
+
+# 字典
+
+
+
+
 
 
 
