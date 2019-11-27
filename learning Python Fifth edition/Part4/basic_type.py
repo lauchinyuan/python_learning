@@ -176,16 +176,72 @@ print({x: ord(x) for x in 'China'})  # 编码字典
 print(ord(x) for x in 'China')  # 普通值
 
 # 字典
+D1 = {'Food': 'Spam', 'Quantity': 4, 'color': 'Pink'}  # 新建字典
+print(D1['Food'])  # 字典索引
 
+D1['Quantity'] += 1  # 修改字典中的对象
+print(D1)
 
+D = {}  # 空字典
+D['name'] = 'Bob'
+D['job'] = 'dev'
+D['age'] = 40
+print(D)
+print(D['name'])
 
+bob1 = dict(name='Bob', job='Dev', age=40)  # 通过dict()传递键值参数对的方法创建字典
+print(bob1)
 
+bob2 = dict(zip(['name', 'job', 'age'], ['Bob', 'Dev', 40]))  # 通过将键和值的序列进行zip配对来创建字典
+print(bob2)
 
+# 重访嵌套
+rec = {'name': {'First': 'Bob', 'Last': 'Smith'},
+       'job': ['dev', 'mgr'],
+       'age': 40.5}
+print(rec['name'])  # 得到键‘name’对应的字典
+print(rec['name']['First'])  # 在内部字典中再次进行键值索引
+print(rec['job'])  # 得到'job'键对应的列表
+print(rec['job'][1])  # 对列表进行索引
+rec['job'].append('janitor')  # 实质上是对列表的操作
+print(rec)
 
+# 不存在的键:if测试
+D = {'a': 1, 'b': 2, 'c': 3}
+D['e'] = 99
+print(D)
+# print(D['f'])  # 错误，键不存在
 
+print('f' in D)  # 判断字典中有无该键
 
+if not 'f' in D:
+    print('missing')
 
+value = D.get('x', 0)  # 搜索键值，没有该键值的情况下返回默认设置的0
+print(value)
 
+value = D['x'] if 'x' in D else 0  # 作用效果同上
 
+# 键的排序：for循环
+Ks = list(D.keys())  # 无序的键列表
+print(Ks)
+
+Ks.sort()  # 排序
+print(Ks)
+for key in Ks:
+    print(key, '=>', D[key])
+
+for key in sorted(D):  # 通过sorted()方法一步完成,sorted()调用返回结果并对各种对象类型进行排序
+    print(key, '=>', D[key])
+
+# for循环小知识
+for c in 'Spam':
+    print(c.upper())  # 打印每个字符的大写形式
+
+# while循环
+x = 4
+while x > 0:
+    print('Spam'*x)
+    x -= 1
 
 
