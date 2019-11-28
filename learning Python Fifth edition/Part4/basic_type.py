@@ -244,4 +244,13 @@ while x > 0:
     print('Spam'*x)
     x -= 1
 
+# 迭代和优化
+# 任何一个从左到右扫描一个Python对象的工具都使用迭代协议
+squares = [x ** 2 for x in [1, 2, 3, 4, 5]]
+print(squares)
+
+squares = []  # 可以试用等效的for循环实现上面的功能,但没有上面列表推导快
+for x in [1, 2, 3, 4, 5]:
+    squares.append(x ** 2)
+print(squares)
 
