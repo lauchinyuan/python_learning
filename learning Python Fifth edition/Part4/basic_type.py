@@ -254,3 +254,51 @@ for x in [1, 2, 3, 4, 5]:
     squares.append(x ** 2)
 print(squares)
 
+# 元组
+T = (1, 2, 3, 4)
+print(len(T))
+print(T + (5, 6))
+print(T)
+print(T[0])
+print(T.index(4))  # 结果为3
+print(T.count(4))  # 4出现1次，故结果为1
+
+# T[0] = 2   # 错误操作，元组不可变
+
+T = (2,) + T[1:]  # 当元组只有一个元素时，要用，
+print(T)  # 此时是T所指向的元组对象改变
+
+T = 'Spam', 3.0, [11, 22, 33]  # 包括元组的圆括号可以省略
+print(T[1])
+print(T[2][1])  # 打印元组第三个元素（列表）中的元素
+
+# 文件
+# 没有特定的字面语法来创建文件
+# 对脚本而言，无论文件包含的数据是什么类型，文件的内容总是字符串
+f = open('data.txt', 'w')  # 创建一个文本输出文件
+f.write('Hello world\n')
+f.close()
+f = open('data.txt')  # 未指定打开模式时，默认为'w'
+text = f.read()
+print(text)
+print(dir(f))  # 查看f所有属性
+
+for line in open('data.txt'):
+    print(line)  # 使用迭代器读取
+
+help(f.seek)  # 查看帮助
+
+# Unicode文本文件
+S = 'sp\xc4m'  # 非ASCII的Unicode文本
+print(S)
+
+file = open('unidata.txt', 'w', encoding='utf-8')
+file.write(S)
+file.close()
+
+text = open('unidata.txt', 'r', encoding='utf-8')
+text = text.read()  # 在脚本中会直接打印，不必加print
+
+
+
+
