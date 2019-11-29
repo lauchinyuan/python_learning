@@ -1,7 +1,9 @@
 # 基本对象类型
 import math
+import decimal
 import random
 import re
+from fractions import Fraction
 
 a = 2**100
 print(a)
@@ -298,6 +300,96 @@ file.close()
 
 text = open('unidata.txt', 'r', encoding='utf-8')
 text = text.read()  # 在脚本中会直接打印，不必加print
+
+raw = open('unidata.txt', 'rb')  # 通过二进制模式查看文件真正存储的内容
+raw = raw.read()
+print(raw)
+
+print(text.encode('utf-8'))  # 手动使用utf8编码
+print(raw.decode('utf-8'))  # 手动使用utf8解码，结果为spÄm
+
+text.encode('latin-1')  # 使用不同编码方式对text编码
+print(text)  # text内容不变
+print(text.encode('latin-1'))
+print(text.encode('utf-16'))
+lent = len(text.encode('latin-1')), len(text.encode('utf-16'))
+print(lent)  # 查看编码长度
+
+# 其他核心类型
+# 集合
+X = set('Spam')
+Y = {'h', 'a', 'm'}
+
+print(X, Y)
+
+print(X & Y)  # 交集
+print(X | Y)  # 并集
+print(X - Y)  # 差集
+print(X > Y)  # 超集
+
+my_set = {n ** 2 for n in [1, 2, 3, 4]}
+print(my_set)
+my_list = list(set([1, 2, 1, 3, 1]))
+print(my_list)  # 通过集合操作可去除列表中的重复项，结果为[1, 2, 3]
+my_set = set('spam') - set('ham')  # 通过集合操作找不同
+print(my_set)
+print(set('spam') == set('pams'))  # 结果为True
+
+# in函数的成员测试操作
+print('p' in set('spam'), 'p' in 'spam', 'ham' in ['eggs', 'spam', 'ham'])
+
+print(1/3)
+print((2/3) + (1/2))
+
+d = decimal.Decimal('3.141')
+print(d + 1)
+
+decimal.getcontext().prec = 2  # 设置小数点位数
+d = decimal.Decimal('1.00')/decimal.Decimal('3.00')
+print(d)
+
+f = Fraction(2, 3)  # 分数：分子+分母
+print(f+1)  # 结果为5/3
+print(f + Fraction(1, 2))  # 结果为7/6
+
+# 布尔值
+print(1 > 2, 1 < 2)
+print(bool('spam'))
+
+X = None
+print(X)  # 以None显示
+L = [None] * 100
+print(L)
+
+# 检查对象类型
+print(type(L))  # 结果为<class 'list'>
+print(type(type(L)))  # 结果为<class 'type'>
+
+# 注：以下做法可用但在Python中不推荐
+# 在代码中检验了特定的类型实际上破坏了灵活性，即限制了对象的类型
+if type(L) == type([]):
+    print('Yes')
+
+if type(L) == list:
+    print('Yes')
+
+if isinstance(L, list):
+    print('Yes')
+
+# 用户定义的类
+class Worker:
+    def __init__(self, name, pay):  # 初始化name和pay两个属性（状态信息）
+        self.name = name
+        self.pay = pay
+
+    def LastName(self):
+        return self.name.split()[-1]
+
+    def giveRaise(self, percent):
+        self.pay *= (1.0 + percent)
+
+
+
 
 
 
