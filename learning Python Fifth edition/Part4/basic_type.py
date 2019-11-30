@@ -377,6 +377,7 @@ if isinstance(L, list):
     print('Yes')
 
 # 用户定义的类
+# 一个类中的函数总有一个隐含的对象self
 class Worker:
     def __init__(self, name, pay):  # 初始化name和pay两个属性（状态信息）
         self.name = name
@@ -385,8 +386,16 @@ class Worker:
     def LastName(self):
         return self.name.split()[-1]
 
-    def giveRaise(self, percent):
+    def giveRaise(self, percent):o
         self.pay *= (1.0 + percent)
+
+
+bob = Worker('Bob Smith', 10000)  # 初始化类，此时会产生新类型的实例
+sue = Worker('Sue John', 15200)
+print(bob.LastName())  # 调用类的小方法自动获取被处理的实例
+print(sue.LastName())
+bob.giveRaise(.1)  # 加工资
+print(bob.pay)
 
 
 
