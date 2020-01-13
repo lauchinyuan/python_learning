@@ -386,7 +386,7 @@ class Worker:
     def LastName(self):
         return self.name.split()[-1]
 
-    def giveRaise(self, percent):o
+    def giveRaise(self, percent):
         self.pay *= (1.0 + percent)
 
 

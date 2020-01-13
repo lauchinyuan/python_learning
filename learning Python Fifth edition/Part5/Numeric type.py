@@ -184,4 +184,114 @@ print((1/3) + (6/12))
 print(Fraction(6, 12))  # 自动化简为1/2
 
 # 分数转换和混用类型
+print(2.5.as_integer_ratio())  # 将浮点数转化为整数相除的形式
+f = 2.5
+z = Fraction(*f.as_integer_ratio())
+print(z)  # 效果同上，结果为5/2
+
+print(x)
+print(x + z)
+print(float(x))
+print(float(z))
+print(Fraction.from_float(1.75))
+print(Fraction(*1.75.as_integer_ratio()))
+
+print(x + 2)  # 7/3
+print(x + 2.0)  # 2.333333333335
+print(x + (1./3))  # 0.6666666666666666
+print(x + (4./3))  # 1.6666666666666665
+print(x + Fraction(4, 3))  # 5/3
+
+print(4.0/3)  # 1.3333333333333333
+print((4.0/3).as_integer_ratio())  # (6004799503160661, 4503599627370496)
+
+print(x)  # 1/3
+a = x + Fraction(*(4.0/3).as_integer_ratio())
+print(a)  # 22517998136852479/13510798882111488
+print(a.limit_denominator(10))  # 5/3
+
+
+#  python2.6之前的集合
+x = set('abcde')
+y = set('bdxyz')
+print(x, y)  # {'d', 'c', 'b', 'e', 'a'} {'d', 'b', 'y', 'z', 'x'}顺序任意可变
+print(x - y)  # {'e', 'c', 'a'}
+print(x | y)  # {'c', 'x', 'e', 'd', 'a', 'z', 'y', 'b'}
+print(x & y)  # {'b', 'd'}
+print(x ^ y)  # {'e', 'c', 'z', 'y', 'x', 'a'}
+print(x > y, x < y)  # False False
+
+print('e' in x)  # True
+print('e' in 'Camelot', 22 in [11, 22, 33])  # 字符串与列表使用in表达式的情况
+
+z = x.intersection(y)  # 类似于x & y
+z.add('Spam')  # 在集合中增加元素
+print(z)  # {'d', 'b', 'Spam'}
+
+# 由于集合是无序的，故不支持分片、索引操作
+# 集合可以使用列表推导
+# 空集合必须通过内置函数set来创建
+for item in set('abc'):
+    print(item * 3)
+# aaa
+# bbb
+# ccc
+
+S = set([1, 2, 3])
+print(S | set([3, 4]))  # {1, 2, 3, 4}
+
+# print(S | [3, 4])  # TypeError: unsupported operand type(s) for |: 'set' and 'list'
+print(S.union([3, 4]))  # {1, 2, 3, 4} 但S仍为 {1, 2, 3}
+
+# python3.X中的集合字面量
+print({1, 2, 3, 4})
+S.add('alot')  # 集合添加项
+print(S)
+
+S1 = {1, 2, 3, 4}
+print(S1 & {1, 3})  # {1, 3}
+print({1, 5, 3, 6} | S1)  # {1, 2, 3, 4, 5, 6}
+print(S1 - {1, 3, 4})  # {2}
+print(S1 > {1, 3})  # True
+
+# python中认为{}仍是一个字典，故创建空集合要使用set
+print(S1 - {1, 2, 3, 4})  # 减完为空集
+t = type({})
+print(t)  # <class 'dict'>
+S = set()  # 创建空集正确方法
+S.add(1.23)
+print(S)  # {1.23}
+
+# 不可变性限制与冻结集合
+# 集合只能包含不可变的对象类型，故列表和字典不可嵌套到集合中
+# S.add([1, 2, 3])  TypeError: unhashable type: 'list'
+# S.add({'apple': '苹果'})  TypeError: unhashable type: 'dict'
+S.add((1, 2, 3))  # 可以添加元组
+print(S)  # {1.23, (1, 2, 3)}
+print(S | {(4, 5, 6), (1, 2, 3)})  # {1.23, (4, 5, 6), (1, 2, 3)}
+
+# python3.X 和2.7中集合推导
+print({x ** 2 for x in [1, 2, 3, 4]})  # {1, 4, 9}
+
+# 集合与列表
+L = [1, 2, 1, 3, 2, 4, 5]
+print(set(L))  # 转换为集合
+L = list(set(L))  # 相当于去除重复项
+print(L)  # [1, 2, 3, 4, 5]
+
+print(set([1, 3, 5, 7]) - set([1, 2, 4, 5, 6]))  # {3, 7}
+print(set('abcdefg') - set('abdghij'))  # {'e', 'c', 'f'}
+
+# 可以借助集合进行顺序无关的等价性测试
+L1, L2 = [1, 3, 5, 2, 4], [2, 5, 3, 4, 1]
+print(L1 == L2)  # False
+print(set(L1) == set(L2))  # True
+print(sorted(L1) == sorted(L2))  # True
+
+# 布尔型
+t = type(True)
+print(t)  # <class 'bool'>
+print(isinstance(True, int))  # True,实质上布尔型为int的子类
+
+
 
