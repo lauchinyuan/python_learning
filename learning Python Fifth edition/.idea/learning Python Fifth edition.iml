@@ -5,6 +5,7 @@
       <excludeFolder url="file://$MODULE_DIR$/Part3_Practice" />
       <excludeFolder url="file://$MODULE_DIR$/Part4" />
       <excludeFolder url="file://$MODULE_DIR$/Part5" />
+      <excludeFolder url="file://$MODULE_DIR$/Part6" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
