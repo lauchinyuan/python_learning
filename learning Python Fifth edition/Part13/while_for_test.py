@@ -82,4 +82,68 @@ for (offset, item) in enumerate(S):
 # a appears at offset 2
 # m appears at offset 3
 
+# 迭代协议
+L = [1, 2, 3]
+I = iter(L)  # 列表自身不是迭代器
+print(I.__next__())  # 1
+print(I.__next__())  # 2
+# 文件自身就是迭代器，故可以直接调用__next__
+
+D = {'a': 1, 'b': 2, 'c': 3}
+I = iter(D)
+print(I.__next__())  # a
+print(I.__next__())  # b
+
+# 扩展列表推导
+print([x + y for x in 'abc' for y in 'lmn'])  # ['al', 'am', 'an', 'bl', 'bm', 'bn', 'cl', 'cm', 'cn']
+
+# range可迭代对象
+R = range(10)
+I = iter(R)
+print(I.__next__())  # 0
+
+# map、zip和filter可迭代对象，本身就是迭代器
+M = map(abs, (-1, 0, 1))
+print(M.__next__())
+print(M.__next__())
+print(M.__next__())
+print(list(map(abs, (-1, 0, 1))))  # [1, 0, 1]
+
+Z = zip((1, 2, 3), (10, 20, 30))
+print(next(Z))  # (1, 10)
+print(next(Z))  # (2, 20)
+
+print(list(filter(bool, ['spam', '', 'ni'])))  # ['spam', 'ni']
+
+print([x for x in ['spam', '', 'ni'] if bool(x)])  # 结果同上
+
+# 多遍迭代器&单遍迭代器
+# range支持多遍迭代
+R = range(3)
+I1 = iter(R)
+I2 = iter(R)
+print(I1.__next__())  # 0
+print(I2.__next__())  # 0
+
+# zip/map/filter不支持同一结果上多个活跃迭代器
+# 他们iter结果就是他们本身
+Z = zip((1, 2, 3), (4, 5, 6))
+I1 = iter(Z)
+I2 = iter(Z)
+print(I1.__next__())  # (1, 4)
+print(I2.__next__())  # (2, 5)
+
+# 字典视图可迭代对象
+D = dict(a=1, b=2, c=3)
+k = D.keys()
+I = iter(k)
+print(I.__next__())  # a
+
+I = iter(D)
+print(I.__next__())  # a
+
+
+
+
+
 
